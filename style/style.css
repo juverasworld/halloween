@@ -32,6 +32,8 @@ body {
 	height: auto;
 	overflow: auto;
 	z-index: 1;
+	overflow-x: hidden;
+
 }
 
 .content {
@@ -135,6 +137,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	padding: 0 0px;
+	padding-top: 15%;
 
 }
 @media (width > 540px) {
@@ -180,6 +183,7 @@ body {
 		width: 100%;
 		height: auto;
 		overflow: hidden;
+		overflow-x: hidden;
 		z-index: 1;
 	}
   }
