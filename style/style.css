@@ -7,6 +7,8 @@
 	/* --p1-color: #6f8711bd; */
 	--p1-color: #ece92dfb;
 	--p2-color: #3bb915;
+	--max-width: 1200px;
+
 	--cubicbz: cubic-bezier(.9, 0, .1, 1);
 	--font-f1: 'Eater', cursive;
 	--font-f2: 'Montserrat', sans-serif;
@@ -587,3 +589,135 @@ a[data-fancybox] img {
 .fancybox__counter {
 	font-size: 40px;
 }
+
+
+
+
+nav {
+	position: fixed;
+	isolation: isolate;
+	width: 100%;
+	background-color: var(--p1-color);
+	z-index: 9;
+  }
+  
+  .nav__bar {
+	width: 100%;
+	max-width: var(--max-width);
+	margin-inline: auto;
+  }
+  
+  .nav__header {
+	padding: 1rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--p2-color);
+  }
+  
+  .nav__logo a {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: white;
+  }
+  
+  .nav__logo a span {
+	color: var(--p2-color);
+  }
+  
+  .nav__menu__btn {
+	font-size: 1.5rem;
+	color: white;
+	cursor: pointer;
+  }
+  
+  .nav__links {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	padding: 2rem;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 2rem;
+	background-color: var(--p1-color);
+	transition: 0.5s;
+	z-index: -1;
+	transform: translateY(-100%);
+  }
+  
+  .nav__links.open {
+	transform: translateY(0);
+  }
+  
+  .nav__links a {
+	white-space: nowrap;
+	color: var(--white);
+	transition: 0.3s;
+  }
+  
+  .nav__links a:hover {
+	color: var(--p2-color);
+  }
+
+  @media (width > 768px) {
+	nav {
+	  position: static;
+	  background-color:var(--p1-color);
+	}
+  
+	.nav__bar {
+	  padding: 2rem 1rem;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  gap: 2rem;
+	}
+  
+	.nav__header {
+	  padding: 0;
+	  background-color: transparent;
+	}
+  
+	.nav__menu__btn {
+	  display: none;
+	}
+  
+	.nav__links {
+	  position: static;
+	  padding: 0;
+	  flex-direction: row;
+	  justify-content: flex-end;
+	  background-color: transparent;
+	  transform: none;
+	  z-index: unset;
+	}
+  
+	.content {
+	  padding: 5rem 1rem;
+	  align-items: flex-start;
+	  text-align: left;
+	  margin-inline-start: unset;
+	}
+  
+	.content h1 {
+	  font-size: 5rem;
+	  line-height: 5rem;
+	}
+  
+	.content h4 {
+	  font-size: 2rem;
+	}
+  
+	.content h2 {
+	  font-size: 2rem;
+	}
+  
+	.content form {
+	  margin-inline-start: unset;
+	}
+  }
