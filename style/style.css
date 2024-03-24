@@ -54,12 +54,12 @@ body {
 }
 
 .section__bg-1 {
-	background: url(../img/fuji-mountain.jpg);
+	background: url(../img/taj-mahal.jpg);
 	filter: blur(15px);
 }
 
 .section__bg-2 {
-	background: url(../img/bg2.jpg);
+	background: url(../img/img3.jpg);
 	filter: blur(10px);
 	transform: scaleX(-1);
 }
